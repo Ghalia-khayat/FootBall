@@ -40,13 +40,6 @@ public class FootBallServiceImpl implements FootBallService {
     }
 
     @Override
-    public void deleteById(Long id) {
-        FootBallInfo footBallInfo1=this.footBallRepository.findById(id).get();
-        footBallRepository.delete(footBallInfo1);
-
-    }
-
-    @Override
     public Page<FootBallInfo> getByPage(int pageNumber) {
         try{
             PageRequest request = PageRequest.of(pageNumber-1 , 10 , Sort.Direction.ASC,"id");

@@ -45,12 +45,6 @@ public class FootBallController {
        return null;
    }
 
-   @DeleteMapping("/delete/{id}")
-    String deleteById(@PathVariable Long id){
-        footBallService.deleteById(id);
-        return "Done";
-
-   }
     @GetMapping("/sorting")
     public ResponseEntity<Object> viewInfo(@RequestParam(name = "p", defaultValue = "1")int pageNumber) {
         try {
